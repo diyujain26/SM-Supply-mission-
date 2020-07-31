@@ -36,10 +36,9 @@ function setup() {
 
 	box1 = new Box(400,320,200,20);
 
-	box2 = new Box(300,270,20,100);
+	box2 = new Box(310,270,20,100);
 	
 	box3 = new Box(510,270,20,100);
-	
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
@@ -47,12 +46,10 @@ function setup() {
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
-
 	 World.add(world,box1);
 	 World.add(world,box2);
      World.add(world,box3);
 	 Engine.run(engine);
-  
 }
 
 function draw() {
