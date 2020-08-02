@@ -34,11 +34,11 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	box1 = new Box(400,320,200,20);
+	box1 = new Box(400,620,200,20);
 
-	box2 = new Box(310,270,20,100);
+	box2 = new Box(290,580,20,100);
 	
-	box3 = new Box(510,270,20,100);
+	box3 = new Box(510,580,20,100);
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
@@ -46,12 +46,14 @@ function setup() {
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
-	 World.add(world,box1);
-	 World.add(world,box2);
-     World.add(world,box3);
+	 //World.add(world,box1);
+	 //World.add(world,box2);
+     //World.add(world,box3);
 	 Engine.run(engine);
 }
-
+box1 = Bodies.rectangle(200/2, 800, 200, 10 , {isStatic:true} );
+box2 = Bodies.rectangle(20/2, 650, 20, 10 , {isStatic:true} );
+box3 = Bodies.rectangle(20/2, 650, 20, 10 , {isStatic:true} );
 function draw() {
   rectMode(CENTER);
 
